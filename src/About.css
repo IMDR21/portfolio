@@ -1,0 +1,39 @@
+/* Card.css */
+#profile {
+    width: 150px;
+    border-radius: 50%;
+    border: solid 2px white;
+  }
+  
+  /* About.css */
+.about-container {
+    padding: 150px;
+  }
+  
+  .profile-section {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .bio-section {
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .bio-section h2 {
+    color: #343a40;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .bio-section p {
+    color: #495057;
+    line-height: 1.6;
+  }
+  
+  .bio-section p + p {
+    margin-top: 10px;
+  }
+  

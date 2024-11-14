@@ -1,0 +1,16 @@
+/* Style for all carousel images */
+.carousel-item img {
+    object-fit: cover; 
+    height: 500px; 
+  }
+  
+  .blurred-image {
+    filter: blur(5px); 
+    transition: filter 0.3s ease;
+  }
+
+  .blurred-image:hover {
+    filter: blur(0px);
+  }
+  
+  

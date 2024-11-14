@@ -1,0 +1,20 @@
+
+.video-container {
+    max-width: 100%;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .video-container iframe {
+    width: 100%;
+    height: auto;
+    max-width: 560px;
+    border-radius: 4px;
+  }
+  
