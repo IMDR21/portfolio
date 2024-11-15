@@ -26,8 +26,10 @@ function Home() {
   return (
     <>
       {loading ? (
-        <div className="d-flex justify-content-center">
-          <Spinner animation="grow" variant="secondary" size="lg" />
+        <div className="d-flex justify-content-center align-items-center" style={{ height: '100vh' }}>
+          <div>
+            <Spinner animation="grow" variant="secondary" size="lg" />
+          </div>
         </div>
       ) : (
         <div className="container mt-5">
@@ -37,11 +39,12 @@ function Home() {
 
           <Carousel activeIndex={index} onSelect={handleSelect} fade>
             <Carousel.Item>
-              <Link to="/about">
+              <Link to="/about" aria-label='Learn more about me'>
                 <img
                   className="d-block w-100 blurred-image"
                   src={AboutImage}
-                  alt="First slide"
+                  alt="A description of me"
+                  loading='lazy'
                 />
                 <Carousel.Caption>
                   <h3>About Me</h3>
@@ -55,7 +58,8 @@ function Home() {
                 <img
                   className="d-block w-100 blurred-image"
                   src={EducImage}
-                  alt="Second slide"
+                  alt="My educational background"
+                  loading='lazy'
                 />
                 <Carousel.Caption>
                   <h3>Educational Background</h3>
@@ -69,7 +73,8 @@ function Home() {
                 <img
                   className="d-block w-100 blurred-image"
                   src={HobbyImage}
-                  alt="Third slide"
+                  alt="My hobbies and passions"
+                  loading='lazy'
                 />
                 <Carousel.Caption>
                   <h3>My Hobbies</h3>
@@ -83,7 +88,8 @@ function Home() {
                 <img
                   className="d-block w-100 blurred-image"
                   src={ContImage}
-                  alt="Fourth slide"
+                  alt="Contact information"
+                  loading='lazy'
                 />
                 <Carousel.Caption>
                   <h3>Contact</h3>

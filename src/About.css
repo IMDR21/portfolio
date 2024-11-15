@@ -4,6 +4,94 @@
     border-radius: 50%;
     border: solid 2px white;
   }
+  .small-card {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    max-width: 300px;
+    margin: 20px auto;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .small-card:hover {
+    transform: translateY(-5px); /* Lift the card on hover */
+  }
+  
+  .avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #f39c12;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+  }
+  
+  .avatar:hover {
+    transform: scale(1.1); /* Slight zoom-in effect */
+    border-color: #e67e22; /* Change the border color on hover */
+  }
+  
+  
+  .card-title {
+    font-size: 1.5rem;
+    color: #333;
+    font-weight: 700;
+    margin: 10px 0;
+  }
+  
+  .card-text {
+    font-size: 1.1rem;
+    color: #777;
+    margin-bottom: 20px;
+  }
+  .small-card:hover .card-title {
+    color: #895a0f; /* Change title color on hover */
+  }
+  
+  .small-card:hover .card-text {
+    color: #555; /* Subtle text color change on hover */
+  }
+  @media (max-width: 768px) {
+    .small-card {
+      max-width: 250px; /* Reduce the card size on smaller screens */
+    }
+  
+    .avatar {
+      width: 120px;
+      height: 120px;
+    }
+  
+    .card-title {
+      font-size: 1.2rem;
+    }
+  
+    .card-text {
+      font-size: 1rem;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .small-card {
+      animation: fadeIn 0.6s ease-out;
+    }
+    
+  }
+  
+  
+  
+  
+  
   
   /* About.css */
 .about-container {

@@ -17,8 +17,11 @@ function About() {
   return (
     <>
       {loading ? (
-        <div className="d-flex justify-content-center">
-          <Spinner animation="grow" variant="secondary" size="lg" />
+        <div className="d-flex justify-content-center align-items-center" style={{ height: '100vh' }}>
+          <div>
+            <Spinner animation="grow" variant="secondary" size="lg" />
+            
+          </div>
         </div>
       ) : (
         <div className="about-container">
@@ -33,7 +36,6 @@ function About() {
               This is my first time deploying a website that people can see 
               and I'm excited to show it all over the internet.
             </p>
-            <br />
             <p>
               Feel free to explore my portfolio and learn more about my interests, 
               skills, and achievements. I'm always eager to connect with others in the tech community!

@@ -1,0 +1,102 @@
+/* Education page styling */
+.edu-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column; /* Ensures the card stretches to full height */
+  }
+  
+  .edu-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .edu-card .card-title {
+    font-weight: bold;
+    color: #2C3E50;
+  }
+  
+  .edu-card .card-text {
+    font-size: 1rem;
+    color: #7F8C8D;
+  }
+  
+  .edu-card .card-img-top {
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  
+  .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures content is spread evenly */
+    height: 100%; /* Makes sure the body fills the card height */
+  }
+  
+  .card-body a {
+    margin-top: auto; /* Push the button to the bottom of the card */
+  }
+  
+  h1.display-4 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+  }
+  
+  h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+  }
+  
+  p.lead {
+    font-size: 1.25rem;
+  }
+  
+  button {
+    font-weight: bold;
+  }
+  
+  .container {
+    max-width: 1200px;
+  }
+  
+  header {
+    background-color: #f4f6f7;
+    padding: 60px 0;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  }
+  
+  header h1 {
+    color: #2980B9;
+  }
+  
+  header p {
+    font-size: 1.1rem;
+    color: #34495E;
+  }
+  
+  /* Ensures that all cards have equal height */
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .col {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .card-deck {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .card-deck .card {
+    flex: 1;
+    margin: 10px;
+  }
+  

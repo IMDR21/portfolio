@@ -1,0 +1,15 @@
+/* Style for active navbar link */
+.nav-link.active {
+    font-weight: bold;
+    color: #d58a11; /* Active link color */
+  }
+  
+  /* Navbar link hover effect */
+  .navbar-dark .navbar-nav .nav-link {
+    color: #ffffff; /* Default link color */
+  }
+  
+  .navbar-dark .navbar-nav .nav-link:hover {
+    color: #f39c12; /* Hover effect on links */
+  }
+  
