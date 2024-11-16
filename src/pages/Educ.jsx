@@ -81,7 +81,7 @@ function Education() {
                 <Card.Body>
                   <Card.Title>Naga College Foundation</Card.Title>
                   <Card.Text>
-                    Currently, I am pursuing a BSIS course at Naga College Foundation. This program has greatly expanded my knowledge in the field of IT and computer science.
+                    Currently, I am pursuing a BSIS course at Naga College Foundation. This program has greatly expanded my knowledge in the field of IS
                   </Card.Text>
                   <a href="https://www.google.com/search?q=Naga+College+Foundation" target="_blank" rel="noopener noreferrer">
                     <Button variant="primary" className="w-100">Go to Website</Button>
