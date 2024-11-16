@@ -1,127 +1,175 @@
 /* Card.css */
 #profile {
-    width: 150px;
-    border-radius: 50%;
-    border: solid 2px white;
-  }
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: solid 2px white;
+}
+
+.small-card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1); /* Softer and larger shadow for depth */
+  max-width: 320px;
+  margin: 20px auto;
+  transition: transform 0.3s ease-in-out;
+  overflow: hidden; /* Ensure the card content doesn't overflow the rounded edges */
+}
+
+/* Hover effects */
+.small-card:hover {
+  transform: translateY(-5px); /* Lift the card on hover */
+}
+
+.avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #f39c12;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+/* Hover effects for avatar */
+.avatar:hover {
+  transform: scale(1.1); /* Slight zoom-in effect */
+  border-color: #e67e22; /* Change the border color on hover */
+}
+
+.card-title {
+  font-size: 1.6rem;
+  color: #333;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+.card-text {
+  font-size: 1.1rem;
+  color: #777;
+  margin-bottom: 20px;
+}
+
+/* Hover effects for title and text */
+.small-card:hover .card-title {
+  color: #895a0f; /* Change title color on hover */
+}
+
+.small-card:hover .card-text {
+  color: #555; /* Subtle text color change on hover */
+}
+
+/* Media query for responsiveness */
+@media (max-width: 768px) {
   .small-card {
-    background-color: #fff;
-    border-radius: 12px;
-    padding: 20px;
-    text-align: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-    max-width: 300px;
-    margin: 20px auto;
-    transition: transform 0.3s ease-in-out;
+    max-width: 270px; /* Slightly reduce card size on smaller screens */
   }
-  
-  .small-card:hover {
-    transform: translateY(-5px); /* Lift the card on hover */
-  }
-  
+
   .avatar {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid #f39c12;
-    margin-bottom: 20px;
-    transition: transform 0.3s ease, border-color 0.3s ease;
+    width: 130px;
+    height: 130px;
   }
-  
-  .avatar:hover {
-    transform: scale(1.1); /* Slight zoom-in effect */
-    border-color: #e67e22; /* Change the border color on hover */
-  }
-  
-  
+
   .card-title {
-    font-size: 1.5rem;
-    color: #333;
-    font-weight: 700;
-    margin: 10px 0;
+    font-size: 1.4rem; /* Adjust font size for title */
   }
-  
+
   .card-text {
-    font-size: 1.1rem;
-    color: #777;
-    margin-bottom: 20px;
+    font-size: 1rem; /* Adjust font size for text */
   }
-  .small-card:hover .card-title {
-    color: #895a0f; /* Change title color on hover */
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
-  
-  .small-card:hover .card-text {
-    color: #555; /* Subtle text color change on hover */
+
+  .small-card {
+    animation: fadeIn 0.6s ease-out; /* Smooth fade-in animation */
   }
-  @media (max-width: 768px) {
-    .small-card {
-      max-width: 250px; /* Reduce the card size on smaller screens */
-    }
-  
-    .avatar {
-      width: 120px;
-      height: 120px;
-    }
-  
-    .card-title {
-      font-size: 1.2rem;
-    }
-  
-    .card-text {
-      font-size: 1rem;
-    }
-    @keyframes fadeIn {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    
-    .small-card {
-      animation: fadeIn 0.6s ease-out;
-    }
-    
-  }
-  
-  
-  
-  
-  
-  
-  /* About.css */
+}
+
+/* About.css */
 .about-container {
-    padding: 150px;
+  padding: 40px 20px;
+  box-sizing: border-box; /* Ensure padding doesn't affect total width */
+}
+
+.profile-section {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.bio-section {
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.bio-heading {
+  color: #343a40;
+  font-size: 2rem;
+  margin-bottom: 15px;
+  text-align: center;
+  font-weight: 600; /* Make heading more prominent */
+}
+
+.bio-section p {
+  color: #495057;
+  margin-bottom: 15px;
+}
+
+.bio-section p:last-child {
+  margin-bottom: 0;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 576px) {
+  .about-container {
+    padding: 30px 15px;
   }
-  
-  .profile-section {
-    margin-bottom: 20px;
-    text-align: center;
+
+  .bio-heading {
+    font-size: 1.6rem; /* Slightly reduce heading size on small screens */
   }
-  
-  .bio-section {
-    padding: 20px;
-    background-color: #f8f9fa;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .bio-section h2 {
-    color: #343a40;
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-  }
-  
+
   .bio-section p {
-    color: #495057;
-    line-height: 1.6;
+    font-size: 0.95rem;
   }
-  
-  .bio-section p + p {
-    margin-top: 10px;
+}
+
+/* Medium screens (576px to 768px) */
+@media (min-width: 576px) and (max-width: 768px) {
+  .about-container {
+    padding: 40px 20px;
   }
-  
+
+  .bio-heading {
+    font-size: 1.8rem; /* Adjust heading size for mid-size screens */
+  }
+
+  .bio-section p {
+    font-size: 1rem;
+  }
+}
+
+/* Large screens (768px and up) */
+@media (min-width: 768px) {
+  .about-container {
+    padding: 50px 40px;
+  }
+
+  .bio-section p {
+    font-size: 1.1rem;
+  }
+}

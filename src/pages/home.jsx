@@ -6,18 +6,20 @@ import EducImage from '../assets/educationslides.jpg';
 import HobbyImage from '../assets/hobbyslide.jpg';
 import ContImage from '../assets/contslides.jpg';
 import '../home.css';
-import '../Fonts.css'; 
 
 function Home() {
   const [loading, setLoading] = useState(true);
   const [index, setIndex] = useState(0);
 
-  // Simulating an API call or async operation with a timeout
   useEffect(() => {
-    setTimeout(() => {
+    const timer = setTimeout(() => {
       setLoading(false); // Stop loading after 2 seconds
     }, 2000);
+  
+    // Cleanup the timer when the component unmounts or re-renders
+    return () => clearTimeout(timer);
   }, []);
+  
 
   const handleSelect = (selectedIndex) => {
     setIndex(selectedIndex);
@@ -33,11 +35,13 @@ function Home() {
         </div>
       ) : (
         <div className="container mt-5">
+          <div className='text-box'>
           <h1 className='font-family'>Welcome to My Website</h1>
           <p className='font-family'>This website serves as a portfolio of my personal information, education, interests, and contact information. Feel free to explore and learn more about me.</p>
-          <p >Use the slider below to navigate through different sections of the website.</p>
+          </div>
+          <p className='font-family'>Use the slider below to navigate through different sections of the website.</p>
 
-          <Carousel activeIndex={index} onSelect={handleSelect} fade>
+          <Carousel activeIndex={index} onSelect={handleSelect} fade aria-label='Welcome to My Website'>
             <Carousel.Item>
               <Link to="/about" aria-label='Learn more about me'>
                 <img

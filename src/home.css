@@ -1,30 +1,110 @@
-/* Style for all carousel images */
+/* Carousel Styles */
 .carousel-item img {
-    object-fit: cover; 
-    height: 500px; 
-  }
-  
-  .blurred-image {
-    filter: blur(5px); 
-    transition: filter 0.3s ease;
+  object-fit: cover; 
+  height: 500px; 
+  transition: transform 0.5s ease; /* Smooth transition for images */
+}
+
+.blurred-image {
+  filter: blur(5px); 
+  transition: filter 0.3s ease;
+}
+
+.blurred-image:hover {
+  filter: blur(0px); /* Removes blur on hover */
+}
+
+.carousel-caption h3 {
+  color: white !important;
+  padding: 10px;
+  font-size: 2rem; /* Adjust the size for better visibility */
+  font-weight: 700; /* Bold caption title */
+}
+
+.carousel-caption p {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.8); /* Lighter text color */
+}
+
+.carousel {
+  margin-top: 30px; /* Add space above the carousel */
+}
+
+/* General Styles */
+body {
+  background: linear-gradient(to right, #fbfbfb, #e9ecef); 
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #2C3E50; /* Base color for text */
+}
+
+/* Header (Title) */
+h1.font-family {
+  text-align: center;
+  color: transparent;
+  font-size: 4rem; /* Larger title for better impact */
+  font-weight: 800; /* Bold weight for stronger visual presence */
+  margin-top: 50px; /* More space from top */
+  letter-spacing: 3px; /* Slightly increased letter spacing */
+  text-transform: uppercase; /* Add uppercase letters for a stronger statement */
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3); /* Enhanced shadow for more contrast */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Paragraph Styling */
+p.font-family {
+  text-align: center; 
+  font-size: 1.25rem;
+  color: #34495E;
+  max-width: 800px; /* Limit paragraph width for readability */
+  margin: 20px auto; /* Center and space the paragraph */
+}
+
+/* Text Box (Content Box) Styling */
+.text-box {
+  border: 1px solid #ddd; 
+  border-radius: 8px;     
+  background-color: #f4f6f7; 
+  padding: 40px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
+  margin: 40px auto; 
+  text-align: center; 
+  transition: all 0.3s ease;
+}
+
+.text-box h1 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  color: #252424;
+  margin-bottom: 20px;
+}
+
+.text-box p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.1rem;
+  color: #292929;
+  margin: 10px 0;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  h1.font-family {
+    font-size: 2.5rem; /* Slightly smaller font size on mobile */
+    margin-top: 20px; /* Adjust spacing for smaller screens */
   }
 
-  .blurred-image:hover {
-    filter: blur(0px);
+  p.font-family {
+    font-size: 1rem; /* Smaller body text size */
+    max-width: 95%; /* Adjust width on mobile */
   }
-  .carousel-caption h3 {
-    color: white !important;
-    padding: 10px;
+
+  .text-box {
+    padding: 20px; /* Reduce padding on smaller screens */
   }
-  
-  
-  
-  @media (max-width: 768px) {
-    h1.font-family {
-      font-size: 2rem; /* Smaller font size on mobile */
-    }
-    p.font-family {
-      font-size: 1rem; /* Adjust body text size */
-    }
+
+  .carousel-item img {
+    height: 350px; /* Adjust carousel image size for mobile */
   }
-  
+}
